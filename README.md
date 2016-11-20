@@ -10,8 +10,7 @@ In the past, I need a Tool which create a VCard with multiple entries. I could n
 
 * Ubuntu
 
-Download or clone this project. Unzip the project in a empty folder. Change in this folder.
-Run the following commands:
+Download or clone this project. Unzip the project in a empty folder. Change in this folder. Run the following commands:
 
 ```sh
 make
@@ -28,7 +27,13 @@ If you want to use it everywhere, copy `bvcard-creator` to a dir like `/usr/bin/
 
 ## How to use
 
-* Create a source text file with your data, in this format: <firstname> <secondname> <mobilephonenumber>. For example:
+* Create a source text file with your data, in this format:
+
+```sh
+firstname secondname mobilephonenumber
+```
+
+For example:
 
 ```sh
 Max Mustermann 1234567
