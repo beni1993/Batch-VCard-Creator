@@ -41,6 +41,7 @@ int umlautinside(char *string){
    }
 }
 
+/* A function how appends an existing string*/
 void stringappend(char *text, char *apptext){
    int index1,index2;
    
@@ -52,6 +53,7 @@ void stringappend(char *text, char *apptext){
    text[index1] = '\0';
 }
 
+/*Convert a string to an quotedprintable-formatted string*/
 void quotetprintable(unsigned char *destination,unsigned char *source){
    int i;
    unsigned char c = ' ';
@@ -64,7 +66,8 @@ void quotetprintable(unsigned char *destination,unsigned char *source){
    }
 }
 
-/* Identifies comments and blank lines */
+/* Identifies comments and blank lines and return
+   1 for a comment and 2 for linebreak or end of the string */
 int comment (char *string){
    int i;
    for (i = 0; string[i] == ' ' && i < 300; i++);
@@ -122,6 +125,7 @@ void new_vcard (char *new, contact new_contact) {
    stringappend (new, "END:VCARD\n");
 }
 
+/*print help*/
 void print_helptext(){
    printf("Aufruf: %s [DATEI] [OPTIONEN]\n\n",PROGRAMMNAME);
    printf("Optionen:\n"
@@ -133,6 +137,7 @@ void print_helptext(){
           "  \n",PROGRAMMNAME);
 }
 
+/*print versioninformation*/
 void print_versiontext(){
    printf("%s - Version: %s\n",PROGRAMMNAME,PROGRAMMVERSION);
    printf("Copyright © 2016 %s\n" ,PROGRAMMAUTOR);
